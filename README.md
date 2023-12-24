@@ -4,22 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><3</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/img/icon-trai-tim-7-mau_054624751.png"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/font/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.css"
-    />
-    <link rel="stylesheet" href="./assets/css/grid.css"/>
-    <link rel="stylesheet" href="./assets/css/styles.css"/>
-    <link
-      rel="stylesheet"
-      href="./assets/font/themify-icons-font/themify-icons/themify-icons.css"
-    />
+    <title>Hùng Nguyễn nè</title>
   </head>
 
 <body>
