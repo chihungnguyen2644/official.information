@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.header{
+  width: 100%;
+  height: 200px;
+  background-color:black;
+  position: relative;
+}
+
+.header__list {
+  list-style: none;
+}
+
+.header__list-item{
+  position: absolute;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: "League Spartan", system-ui, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  background-color: #212121;
+  color: #ddd;
+}
+
+ul {
+  list-style: none;
+}
+
+.main {
+  max-width: 75rem;
+  padding: 3em 1.5em;
+}
+
+.main__heading {
+  font-weight: 600;
+  font-size: 2.25em;
+  margin-bottom: 0.75em;
+  text-align: center;
+  color: #eceff1;
+}
+
+.cards {
+  position: relative;
+}
+
+.cards__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5em;
+}
+
+.card {
+  --flow-space: 0.5em;
+  --hsl: var(--hue), var(--saturation), var(--lightness);
+  flex: 1 1 14rem;
+  padding: 1.5em 2em;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  align-items: start;
+  gap: 1.25em;
+  color: #eceff1;
+  background-color: #2b2b2b;
+  border: 1px solid #eceff133;
+  border-radius: 15px;
+}
+
+.card:nth-child(1) {
+  --hue: 165;
+  --saturation: 82.26%;
+  --lightness: 51.37%;
+}
+
+.card:nth-child(2) {
+  --hue: 291.34;
+  --saturation: 95.9%;
+  --lightness: 61.76%;
+}
+
+.card:nth-child(3) {
+  --hue: 338.69;
+  --saturation: 100%;
+  --lightness: 48.04%;
+}
+
+.card__bullets {
+  line-height: 1.4;
+}
+
+.card__bullets li::before {
+  display: inline-block;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='16' title='check' fill='%23dddddd'%3E%3Cpath d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z' /%3E%3C/svg%3E");
+  transform: translatey(0.25ch);
+  margin-right: 1ch;
+}
+
+.card__heading {
+  font-size: 1.05em;
+  font-weight: 600;
+}
+
+.card__price {
+  font-size: 1.75em;
+  font-weight: 700;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1.25em);
+}
+
+.cta {
+  display: block;
+  align-self: end;
+  margin: 1em 0 0.5em 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #0d0d0d;
+  padding: 0.7em;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  opacity: var(--opacity, 0);
+  -webkit-mask: radial-gradient(
+    25rem 25rem at var(--x) var(--y),
+    #000 1%,
+    transparent 50%
+  );
+  mask: radial-gradient(
+    25rem 25rem at var(--x) var(--y),
+    #000 1%,
+    transparent 50%
+  );
+  transition: 400ms mask ease;
+  will-change: mask;
+}
+
+.overlay .card {
+  background-color: hsla(var(--hsl), 0.15);
+  border-color: hsla(var(--hsl), 1);
+  box-shadow: 0 0 0 1px inset hsl(var(--hsl));
+}
+
+.overlay .cta {
+  display: block;
+  grid-row: -1;
+  width: 100%;
+  background-color: hsl(var(--hsl));
+  box-shadow: 0 0 0 1px hsl(var(--hsl));
+}
+
+:not(.overlay) > .card {
+  transition: 400ms background ease;
+  will-change: background;
+}
+
+:not(.overlay) > .card:hover {
+  --lightness: 95%;
+  background: hsla(var(--hsl), 0.1);
+}
+element.style {
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+.Sq\(28px\) {
+    height: 28px;
+    width: 28px;
+}
+svg {
+    fill: currentColor;
+}
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+*, :after, :before {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+svg[Attributes Style] {
+    width: 24px;
+    height: 24px;
+}
+user agent stylesheet
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+a {
+    color: var(--color--text-primary);
+    text-decoration: none;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+user agent stylesheet
+li {
+    text-align: -webkit-match-parent;
+}
+.List\(n\) {
+    list-style-type: none;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+.Us\(t\) {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+}
+.Ta\(start\) {
+    text-align: left;
+}
+.Ta\(c\) {
+    text-align: center;
+
+}
+
+<div class="unit-copy-wrapper">{
+display: flex;
+flex-direction: column;
+}
+
+@font-face {
+  font-family: "League Spartan", system-ui, sans-serif";
+  src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --speed: 0.25s;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: hsl(0 0% 4%);
+  font-family: "League Spartan", system-ui, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  border: 1px solid hsl(0 0% 100% / 0.25);
+  border-radius: 100px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 3.5em;
+  gap: 1.5em;
+  font-family: "Geist Sans", sans-serif;
+  font-weight: 80;
+  background:
+    hsl(280 0% 12%);
+  color: hsl(0 0% 90%);
+  padding: 0.5em 0.5em 0.5em 1.5em;
+  place-items: center;
+  box-shadow:
+    0 1px inset hsl(0 0% 100% / 0.5),
+    0 -10px 20px 10px hsl(0 0% 0% / 0.5) inset,
+    0 10px 20px 10px hsl(0 0% 50% / 0.25) inset,
+    0 1px hsl(0 0% 2% / 0.75);
+  letter-spacing: 0.05ch;
+}
+
+button:focus-visible {
+  outline-offset: 0.5em;
+  outline-color: hsl(280 80% 80% / 0.5);
+}
+
+.icon {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0.5em;
+}
+
+.icon {
+  overflow: hidden;
+}
+
+.icon svg {
+  width: 50%;
+  overflow: visible !important;
+}
+
+svg path:nth-of-type(2) {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transition:
+    fill var(--speed),
+    rotate var(--speed),
+    scale var(--speed),
+    translate var(--speed);
+}
+
+svg path:nth-of-type(1) {
+  translate: 5rem 0;
+  transform-box: fill-box;
+  transition: translate var(--speed);
+  opacity: 0.75;
+}
+
+button:is(:hover, :focus-visible) svg path:nth-of-type(2) {
+  translate: 0 -50%;
+  rotate: 290deg;
+  scale: 0.65;
+  fill: hsl(0 0% 20%);
+  transition-timing-function: ease, ease, cubic-bezier(.2, .7, .9, 1.5);
+}
+
+button:is(:hover, :focus-visible) svg path:nth-of-type(1) {
+  translate: 0 0;
+}
+
+.action {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background:
+    linear-gradient(transparent 50%, hsl(0 0% 30% / 0.5)),
+    hsl(0 0% 0%);
+  box-shadow: 0 -1px inset hsl(0 0% 100% / 0.35);
+  width: 3.5em;
+  aspect-ratio: 1;
+  transition: width var(--speed);
+  border-radius: 100px;
+}
+
+.icon {
+  color: hsl(0 0% 90%);
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.text {
+  display: inline-block;
+  z-index: 2;
+  padding: 0 2rem;
+}
+
+button:is(:hover, :focus-visible) .action {
+  width: 100%;
+}
+
+
+
+
